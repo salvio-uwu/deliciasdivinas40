@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delicias Divinas</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo1.png" alt="Delicias Divinas Logo" class="logo" />
+    </div>
+   <nav>
+  <ul class="navbar">
+    <li><a href="#carrusel" class="active">INICIO</a></li>
+    <li><a href="#pasteles">MENÚ</a></li>
+    <li><a href="#miFormulario">CONTACTO</a></li>
+  </ul>
+</nav>
+
+  </header>
+
+  <main>
+    <!-- Carrusel grande -->
+    <div class="slider-wrapper" id="carrusel">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="gelatina3.png" alt="Gelatina Fresas con Crema" /></div>
+          <div class="swiper-slide"><img src="pastel3.png" alt="Gelansito" /></div>
+          <div class="swiper-slide"><img src="postre.png" alt="Gelatina Chamoy" /></div>
+          <div class="swiper-slide"><img src="gelatina1.png" alt="Gelatina Mango" /></div>
+          <div class="swiper-slide"><img src="postre1.png" alt="Gelatina Fresas" /></div>
+          <div class="swiper-slide"><img src="pastel1.png" alt="Gelatina Mosaico" /></div>
+          <div class="swiper-slide"><img src="gelatina7.png" alt="Gelatina Pistache" /></div>
+          <div class="swiper-slide"><img src="pastel4.png" alt="Gelatina Pistache" /></div>
+          <div class="swiper-slide"><img src="postre12.png" alt="Gelatina Pistache" /></div>
+           <div class="swiper-slide"><img src="pastel5.png" alt="Gelatina Pistache" /></div>
+           <div class="swiper-slide"><img src="gelatina6.png" alt="Gelatina Pistache" /></div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <!-- (quitado </section> suelto) -->
+
+    <!-- Contenido principal en wrapper (solo una vez) -->
+    <div class="wrapper">
+
+      <!-- Pasteles -->
+      <section class="section">
+        <h2>Pasteles</h2>
+        <div class="carousel" id="pasteles">
+          
+          <!-- cards … -->
+          <article class="card">
+            <div class="media"><img alt="Pastel de mango" src="pastel1.png" /></div>
+            <div class="body"><span class="title">Pastel rollo de mango</span><p class="desc">Rico pastel relleno de trocitos de mango, envuelto con merengue y queso philadelphia</p></div>
+          </article>
+
+          <article class="card">
+            <div class="media"><img alt="Pastel churro chessecake" src="pastel.png" /></div>
+            <div class="body"><span class="title">Pastel Churro Chessecake</span><p class="desc">Pastel con cobertura de nutella y fresas</p></div>
+          </article>
+
+          <article class="card">
+            <div class="media"><img alt="Pastel triple chocolate" src="pastel2.png" /></div>
+            <div class="body"><span class="title">Paste triple chocolate</span><p class="desc">Pastel a base de triple chocolate relleno de fresas y queso philadelphia cubierto de betun</p></div>
+          </article>
+
+      
+          <article class="card">
+            <div class="media"><img alt="Pastel de sandia con frutas" src="pastel3.png" /></div>
+            <div class="body"><span class="title">Pastel de Sandia con Frutas</span><p class="desc">Delicioso Pastel de Sandia cubierto de diferentes frutas adicionales </p></div>
+          </article>
+
+          <article class="card">
+            <div class="media"><img alt="Pastel de oreo" src="pastel4.png" /></div>
+            <div class="body"><span class="title">Pastel de Oreo</span><p class="desc">Pastel de Oreo con fresas</p></div>
+          </article>
+
+          <article class="card">
+            <div class="media"><img alt="Pecanpie" src="pastel5.png" /></div>
+            <div class="body"><span class="title">Pecanpie</span><p class="desc">Pay de Nuez </p></div>
+          </article>
+
+          <article class="card">
+            <div class="media"><img alt="Pastel chocoflan" src="pastel6.png" /></div>
+            <div class="body"><span class="title">Chocoflan</span><p class="desc">Flan con pastel de chocolate y fresas cubiertas de chocolate y dulce de leche  </p></div>
+          </article>
+
+          <article class="card">
+            <div class="media"><img alt="Pastel de frutas ralladas" src="pastel7.png" /></div>
+            <div class="body"><span class="title">Pastel de frutas ralladas</span><p class="desc">Pastel de fruta rayada con limon chamoy  tajin y trocitos de mango  y gomitas picositas  </p></div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Galletas y Postres -->
+      <section class="section">
+        <h2>Galletas y Postres</h2>
+        <div class="carousel" id="galletas">
+          <article class="card">
+            <div class="media"><img alt="Empanadas" src="postre.png" /></div>
+            <div class="body"><span class="title">Ricas empanadas de cajeta con nuez y piña</span><p class="desc">Rico pastel relleno de trocitos de mango, envuelto con merengue y queso philadelphia</p></div>
+          </article>
+          <article class="card">
+            <div class="media"><img alt="Chessecake de fresas" src="postre1.png" /></div>
+            <div class="body"><span class="title">Chessecake de fresas</span><p class="desc">Rico chassecake con mermelada de fresa natural</p></div>
+          </article>
+           <article class="card">
+            <div class="media"><img alt="Vaso de gelatina" src="postre2.png" /></div>
+            <div class="body"><span class="title">Chocobrawnie</span><p class="desc"></div>
+          </article>
+          <article class="card">
+            <div class="media"><img alt="Vaso de gelatina" src="postre3.png" /></div>
+            <div class="body"><span class="title">Vaso de Gelatina</span><p class="desc">Vaso de gelatina mosaico con fruta y nuez</p></div>
+          </article>
+          <article class="card">
+            <div class="media"><img alt="Cupcake" src="postre4.png" /></div>
+            <div class="body"><span class="title">Cupcake</span><p class="desc">Media docena de cupcake, chocolate, red velvet y vainilla</p></div>
+          </article>
+           <article class="card">
+            <div class="media"><img alt="Vaso mosaico" src="postre5.png" /></div>
+            <div class="body"><span class="title">Vaso Mosaico</span><p class="desc">Vaso de gelatina de mosaico</p></div>
+          </article>
+           <article class="card">
+            <div class="media"><img alt="Vaso de carlota" src="postre6.png" /></div>
+            <div class="body"><span class="title">Vaso de Carlota de limon</span><p class="desc">Rico postre de carlota </p></div>
+          </article>
+           <article class="card">
+            <div class="media"><img alt="Rebanada de churro" src="postre7.png" /></div>
+            <div class="body"><span class="title">Rebanada de Churro chessecake</span><p class="desc">Con cobertura de Nutella y fresa</p></div>
+          </article>
+           <article class="card">
+            <div class="media"><img alt="Brawnie" src="postre8.png" /></div>
+            <div class="body"><span class="title">Brawnie</span><p class="desc">Brawnie de chocolate con nuez,topin a elegir</p></div>
+          </article>
+           <article class="card">
+            <div class="media"><img alt="Mustachon" src="postre9.png" /></div>
+            <div class="body"><span class="title">Mustachon</span><p class="desc"></div>
+          </article>
+           <article class="card">
+            <div class="media"><img alt="Flan" src="postre10.png" /></div>
+            <div class="body"><span class="title">Flan</span><p class="desc">Delicioso Flan individual</p></div>
+          </article>
+           <article class="card">
+            <div class="media"><img alt="Rebanada de carlota" src="postre11.png" /></div>
+            <div class="body"><span class="title">Rebanada de Carlota de limon</span></div>
+          </article>
+          <article class="card">
+            <div class="media"><img alt="Postre de Mnago" src="postre12.png" /></div>
+            <div class="body"><span class="title">Postre de Mango</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Gelatinas -->
+      <section class="section">
+        <h2>Gelatinas</h2>
+        <div class="carousel" id="gelatinas">
+          <article class="card">
+            <div class="media"><img alt="Gelansito" src="gelatina1.png" /></div>
+            <div class="body"><span class="title">Gelatina de Gansito</span></div>
+          </article>
+          <article class="card">
+            <div class="media"><img alt="Gelatina fresas con crema" src="gelatina2.png" /></div>
+            <div class="body"><span class="title">Gelatina fresas con crema</span><p class="desc">Gelatina con queso philadelphia, leche condensada y fresas</p></div>
+          </article>
+           <article class="card">
+            <div class="media"><img alt="Gelatina mangonada" src="gelatina3.png" /></div>
+            <div class="body"><span class="title">Gelatina Mangonada</span><p class="desc">Gelatina con trositos de mango y cubierta con chamoy y tajin</p></div>
+          </article>
+           <article class="card">
+            <div class="media"><img alt="Gelatina de mango" src="gelatina4.png" /></div>
+            <div class="body"><span class="title">Gelatina de Mango </span></div>
+          </article>
+           <article class="card">
+            <div class="media"><img alt="Gelatina ferrero" src="gelatina5.png" /></div>
+            <div class="body"><span class="title">Gelatina ferrero</span><p class="desc">Gelatina hecha con ferrero y nutella</p></div>
+          </article>
+           <article class="card">
+            <div class="media"><img alt="Rosca de gelatina" src="gelatina6.png" /></div>
+            <div class="body"><span class="title">Rosca de gelatina mosaico</span><p class="desc">Rica deliciosa rosca de mosaico para compartir</p></div>
+          </article>
+           <article class="card">
+            <div class="media"><img alt="Gelatina de pistacge" src="gelatina7.png" /></div>
+            <div class="body"><span class="title">Gelatina de Pistache</span></div>
+          </article>
+           <article class="card">
+            <div class="media"><img alt="gelatina de piña colada" src="gelatina8.png" /></div>
+            <div class="body"><span class="title">Gelatina de piña colada </span><p class="desc">Gelatina de leche condensada y trocitos de gelatina de piña</p></div>
+          </article>
+          
+          <article class="card">
+            <div class="media"><img alt="Flan" src="pastel8.png" /></div>
+            <div class="body"><span class="title">Flan</span><p class="desc">Delicioso Flan con cubierta de dulce de leche para compartir </p></div>
+          </article>
+
+        </div>
+      </section>
+      
+
+      <!-- Formulario de contacto (fuera de info-links) -->
+  <form id="miFormulario">
+    <h2>📩 Contáctanos</h2>
+
+    <div class="campo-grupo">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre..." required>
+    </div>
+
+    <div class="campo-grupo">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Tu correo electrónico..." required>
+    </div>
+
+    <div class="campo-grupo">
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+    </div>
+
+    <button type="submit">Enviar ✨</button>
+</form>
+
+<!-- Bloque flotante de redes sociales -->
+<div class="social-float" id="social-float">
+  <a href="https://wa.me/14698812229?text=Hola%20quiero%20más%20información%20sobre%20sus%20servicios"
+   target="_blank"
+   class="whatsapp"
+   aria-label="Contactar por WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+  <a href="https://www.tiktok.com/@TUNOMBRE" target="_blank" class="tiktok" aria-label="TikTok" data-i="1">
+    <img src="https://img.icons8.com/color/48/tiktok--v1.png" alt="TikTok" />
+  </a>
+  <a href="https://www.instagram.com/tuusuario" target="_blank" class="instagram" aria-label="Instagram" data-i="2">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+  </a>
+  <a href="https://www.facebook.com/tuusuario" target="_blank" class="facebook" aria-label="Facebook" data-i="3">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Facebook_icon_%28black%29.svg" alt="Facebook">
+  </a>
+</div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2025 Delicias Divinas. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+  </main>
+
+  <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const mainSwiper = new Swiper('.mySwiper', {
+        loop: true,
+        pagination: { el: '.swiper-pagination' },
+        autoplay: { delay: 3000, disableOnInteraction: false },
+      });
+    });
+
+    // Carruseles horizontales
+    function makeCarousel(id) {
+      const track = document.getElementById(id);
+      if (!track) return;
+      const prev = document.querySelector(`[data-prev="${id}"]`);
+      const next = document.querySelector(`[data-next="${id}"]`);
+      const page = () => track.clientWidth;
+
+      prev?.addEventListener('click', () => track.scrollBy({ left: -page(), behavior: 'smooth' }));
+      next?.addEventListener('click', () => track.scrollBy({ left:  page(), behavior: 'smooth' }));
+
+      track.setAttribute('tabindex', '0');
+      track.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft')  prev?.click();
+        if (e.key === 'ArrowRight') next?.click();
+      });
+    }
+    makeCarousel('pasteles');
+    makeCarousel('galletas');
+    makeCarousel('gelatinas');
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    const formulario = document.getElementById('miFormulario');
+
+    formulario.addEventListener('submit', function(evento) {
+        // Previene el envío del formulario por defecto
+        evento.preventDefault();
+
+        // Obtiene los valores de los campos
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+
+        // Validaciones básicas
+        if (nombre.trim() === '') {
+            alert('Por favor, ingresa tu nombre.');
+            return;
+        }
+
+        if (email.trim() === '' || !email.includes('@')) {
+            alert('Por favor, ingresa un email válido.');
+            return;
+        }
+
+        // Si todo está bien, puedes enviar los datos a un servidor
+        console.log('Formulario enviado con éxito!');
+        // Aquí podrías usar una API como `fetch()` para enviar los datos a tu servidor
+        alert('¡Gracias por tu mensaje!');
+        formulario.reset(); // Limpia el formulario
+    });
+});
+
+(function() {
+    const container = document.getElementById('social-float');
+    if (!container) return;
+
+    const items = Array.from(container.querySelectorAll('a'));
+    items.forEach((a, idx) => {
+      const img = a.querySelector('img');
+      if (!img) return;
+      img.style.setProperty('--i', a.dataset.i ?? idx);
+      img.style.setProperty('--stagger-step', '90ms');
+    });
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.classList.add('is-revealed');
+          obs.unobserve(img);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -10% 0px',
+      threshold: 0.2
+    });
+
+    items.forEach(a => {
+      const img = a.querySelector('img');
+      if (img) observer.observe(img);
+    });
+  })();
+
+  </script>
+</body>
+</html>

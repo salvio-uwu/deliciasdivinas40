@@ -1,0 +1,439 @@
+:root {
+  --mint: #c1ebd2;
+  --dark: #212121;
+  --accent: #fbdcdc;
+  --meloncito: #fcd397;
+  --cafe: #5a2d0c;
+  --blanco: #ffffff;
+}
+
+/* General */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--mint);
+  color: var(--dark);
+  background: linear-gradient(135deg, #d4f1f4, #fce2db);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+/* Logo */
+.logo-container {
+  text-align: center;
+  margin-top: 10px;
+}
+.logo {
+  width: 300px;
+  max-width: 90%;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 10px 0;
+  background-color: var(--mint);
+  margin: 0;
+}
+.navbar li a {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 12px 24px;
+  margin: 5px;
+  display: inline-block;
+  color: var(--cafe);
+  background-color: var(--blanco);
+  border: 2px solid #96e6f3;
+  border-radius: 2px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.navbar li a:hover {
+  background-color: var(--accent);
+  color: #1b7b8f;
+}
+.navbar li a.active {
+  color: #1b7b8f;
+}
+
+/* Carrusel principal */
+.slider-wrapper {
+   background-color: transparent;
+  border: 8px solid white;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 860px;
+  margin: 40px auto 10px; /* menos margen inferior */
+  padding: 0;
+  height: 420px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.swiper-pagination-bullet {
+  background: #444;
+}
+.swiper-pagination-bullet-active {
+  background: #000;
+}
+
+:root{
+      --text:#1b1b1b;
+      --muted:#5b5b5b;
+      --card:#fff;
+      --stroke:#e9eaec;
+      --shadow:0 1px 2px rgba(0,0,0,.04), 0 6px 20px rgba(0,0,0,.06);
+      --radius:14px;
+      --gap:22px;
+    }
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--mint); color:var(--text); font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    }
+    .wrapper{max-width:1160px; margin:0 auto; padding:32px 20px 64px}
+
+    /* Headings */
+    h2{font-size:24px; margin:28px 0 18px; letter-spacing:.2px}
+
+    /* Grid */
+    .grid{
+      display:grid; gap:var(--gap);
+      grid-template-columns:repeat(4, minmax(0,1fr));
+    }
+    @media (max-width:1080px){.grid{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width:820px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:520px){.grid{grid-template-columns:1fr}}
+
+    /* Card */
+    .card{background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; transition:transform .2s ease, box-shadow .2s ease; border:1px solid var(--stroke)}
+    .card:hover{transform:translateY(-2px); box-shadow:0 2px 6px rgba(0,0,0,.06), 0 14px 30px rgba(0,0,0,.12)}
+
+    .media{position:relative; aspect-ratio: 16 / 11; background:#f4f5f6}
+    .media img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+
+    .body{padding:14px 14px 18px}
+    .title{display:block; font-weight:700; margin-bottom:6px}
+    .desc{font-size:14px; color:var(--muted); margin:0}
+
+    /* Section spacing to mimic design */
+    .section{margin-bottom:28px}
+    .section + .section{margin-top:18px}
+
+
+
+/* === Carrusel horizontal (mantiene el estilo de las tarjetas) === */
+.carousel{
+  display:flex;                   /* tarjetas en fila */
+  gap:var(--gap);                 /* mismo espaciado que el grid */
+  overflow-x:auto;                /* scroll horizontal */
+  scroll-snap-type:x mandatory;   /* anclaje por tarjeta */
+  padding-bottom:10px;            /* evita recorte de sombra */
+  -webkit-overflow-scrolling:touch;
+}
+
+/* ancho fijo por tarjeta para que “corran” en la banda */
+.carousel > .card{
+  flex:0 0 auto;                  /* no se encogen */
+  width:320px;                    /* ajusta según tu diseño (280–360px) */
+  scroll-snap-align:start;        /* anclaje al inicio */
+}
+
+/* barra de scroll opcional (estética) */
+.carousel::-webkit-scrollbar{height:8px}
+.carousel::-webkit-scrollbar-thumb{background:#cfd3d9; border-radius:999px}
+.carousel::-webkit-scrollbar-track{background:#f4f5f6}
+
+/* Responsivo: tarjetas un poco más anchas en desktop amplio */
+@media (min-width:1280px){
+  .carousel > .card{ width:360px; }
+}
+
+.nav{
+  position:relative;              /* cámbialo a absolute si los quieres superpuestos */
+  margin:8px 6px 0 0;
+  width:40px; height:40px;
+  border-radius:999px; border:1px solid var(--stroke);
+  background:#fff; box-shadow:var(--shadow);
+  cursor:pointer;
+}
+
+
+
+/* Info cupcakes */
+.info-links {
+  background-color: var(--mint);
+  text-align: center;
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.info-item {
+  font-family: 'Georgia', serif;
+  color: var(--cafe);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.info-item a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: underline;
+  color: var(--cafe);
+  font-size: 1rem;
+}
+.info-icon {
+  width: 60px;
+  height: auto;
+  margin-bottom: 15px;
+}
+.iconos i {
+  font-size: 1.4rem;
+  margin: 0 6px;
+  color: var(--cafe);
+}
+.info-stars {
+  grid-column: span 3;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+
+/* Estilo general del formulario */
+#miFormulario {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    animation: fadeIn 0.8s ease-in-out;
+    
+}
+
+
+/* Título */
+#miFormulario h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0077b6;
+}
+
+/* Campos */
+.campo-grupo {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 5px;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto en focus */
+input:focus,
+textarea:focus {
+    border-color: #00b4d8;
+    box-shadow: 0 0 8px rgba(0, 180, 216, 0.3);
+    outline: none;
+}
+
+/* Botón */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #00b4d8, #0077b6);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #0096c7, #005f73);
+    transform: scale(1.05);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Contenedor flotante */
+.social-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* Íconos generales */
+.social-float a img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #ffccff;
+  padding: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  will-change: transform, filter, opacity;
+}
+
+/* Efecto hover */
+.social-float a img:hover,
+.social-float a:focus-visible img {
+  transform: scale(1.15);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  outline: none;
+}
+
+
+/* Estado inicial + animación para cada icono */
+ /* Contenedor */
+  .social-float {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 20px;
+  }
+
+  /* Íconos generales */
+  .social-float a img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: white;
+    padding: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    will-change: transform, filter, opacity;
+    opacity: 0; /* Ocultos hasta que aparezcan */
+  }
+
+  /* Hover/foco accesible */
+  .social-float a img:hover,
+  .social-float a:focus-visible img {
+    transform: scale(1.15);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    outline: none;
+  }
+
+  /* Colores por red */
+  .whatsapp img { background: #25D366; }
+  .tiktok img { background: #000; }
+  .instagram img {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  }
+  .facebook img { background: #1877F2; }
+
+  /* Animación entrada */
+  @keyframes fadeBlurUp {
+    0% {
+      opacity: 0;
+      filter: blur(14px) saturate(0.9);
+      transform: translateY(14px) scale(0.94);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+    }
+    60% {
+      opacity: 1;
+      filter: blur(0) saturate(1.05);
+      transform: translateY(0) scale(1.035);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0) saturate(1);
+      transform: translateY(0) scale(1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+  }
+
+  /* Clase que activa la animación */
+  .is-revealed {
+    animation: fadeBlurUp 680ms cubic-bezier(.2,.7,.2,1) both;
+    animation-delay: calc(var(--stagger-step, 90ms) * var(--i, 0));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .social-float a img,
+    .social-float a img.is-revealed {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+      filter: none !important;
+    }
+  }
+    /* --- FOOTER --- */
+/* Fuente e iconos */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+.footer {
+  background-color: #bce8d2; /* pastel verde */
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
